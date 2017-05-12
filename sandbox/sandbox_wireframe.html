@@ -5,67 +5,41 @@
     <title>Title Tag</title>
     <meta name="description" content="">
     <meta charset="utf-8">
-    <style type="text/css">
-        #menu ul {
-            list-style: none;
-        }
-
-        #menu li {
-            display: inline;
-        }
-
-    </style>
-
-    <script type="text/javascript">
-        var slideIndex = 0;
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {
-                slideIndex = 1
-            }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
-
-    </script>
 </head>
 
 <body>
     <header>
-        <div class="navbar">
-            <img src="/JMerk21.github.io/images/lemoncar.png" height="42" width="42">
-            <nav>
-                <div id="menu">
-                    <ul>
-                        <li>Link_1</li>
-                        <li>Link_2</li>
-                        <li>Link_3</li>
-                        <li>Link_4</li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <img class="mySlides" src="http://lorempixel.com/400/200/">
-    <img class="mySlides" src="http://lorempixel.com/400/200/">
-    <img class="mySlides" src="http://lorempixel.com/400/200/">
-    <img class="mySlides" src="http://lorempixel.com/400/200/">
-
-    <footer>
-        <div id="menu">
+        <img src="http://lorempixel.com/100/100/cats" alt="logo">
+        <nav>
             <ul>
-                <li>Copyright here</li>
-                <li>Contact Info</li>
-                <li>Social Media</li>
-                <li>Site map</li>
+                <li><a href="#">Link_1</a></li>
+                <li><a href="#">Link_2</a></li>
+                <li><a href="#">Link_3</a></li>
+                <li><a href="#">Link_4</a></li>
             </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="slider">
+            <div class="slide">
+                <img src="http://unsplash.it/800/200" alt="slide1">
+                <div>
+                    <h2>Slide 1 Title</h2>
+                    <p>Paragraph here</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="http://unsplash.it/800/200?random" alt="slide2"></div>
+            <div>
+                <h2>Slide 2 title</h2>
+                <p>Paragraph here</p>
+            </div>
         </div>
-    </footer>
+        <div class="product-gallery"></div>
+    </main>
+
+    <footer></footer>
 
 </body>
+
+</html>

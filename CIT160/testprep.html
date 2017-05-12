@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vehicle Mileage</title>
+    <script type="text/javascript">
+        function calculate() {
+            var beginMile = parseFloat(document.getElementById('beginMile').value);
+            var endMile = parseFloat(document.getElementById('endMile').value);
+            var gallons = parseFloat(document.getElementById('gallons').value);
+
+
+            var gasMileage = (endMile - beginMile) / gallons;
+
+            var output = "You are getting " + gasMileage + " miles per gallon."
+            document.getElementById('output').innerHTML = output;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    Please enter the starting Mileage: <input type='text' id='beginMile'><br>
+    Please enter the ending Mileage:  <input type='text' id='endMile'><br>
+    Please enter the amount of gallons used: <input type='text' id='gallons'><br>
+    <button type='button' onClick='calculate()'>Calculate</button><br>
+    <div id='output'></div>
+</body>
+
+</html>

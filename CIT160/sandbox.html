@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function heartRate() {
+            var age = parseInt(document.getElementById('age').value);
+            var slowRate = 0.65 * (220 - age);
+            var fastRate = 0.85 * (220 - age);
+
+            var output = "Your suggested heart rate should be between " + slowRate + " and " + fastRate;
+            document.getElementById('output').innerHTML = output;
+        }
+
+    </script>
+</head>
+
+<body>
+    Please enter your age: <input type='text' id='age'>
+    <button type='button' onClick='heartRate()'>Find your optimum heart rate</button>
+    <div id='output'></div>
+</body>
+</html>
