@@ -7,7 +7,7 @@
     <script type="text/javascript">
         function computeVolume() {
             var length = parseFloat(document.getElementById("length").value);
-            var volume1 = parseFloat(Math.pow(length * 3)) / (Math.SQRT2 * 6);
+            var volume1 = (length * length * length) / (Math.SQRT2 * 6);
 
             parseFloat(document.getElementById("volume").innerHTML = volume1);
         }
