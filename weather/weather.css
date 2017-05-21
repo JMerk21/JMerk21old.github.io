@@ -1,14 +1,54 @@
-body{
-    font-size: 1em;
+* {
+    box-sizing: border-box;
+    /* changes width property to total width instead of content width */
 }
 
-h1{
-    font-size: 2em;
-    font-family: cursive;
+article,
+aside,
+footer,
+header{
+    position: static;
+    bottom: 0;
+    left: 0;
 }
 
-header nav{
-    background-color: red;
-    font-family: sans-serif;
-    border;
+#nav_bar{
+    display: flex;
+   justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-end;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#weather_head{
+    position: static;
+    right: 50%;
+}
+section,
+main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+ul {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+}
+
+figcaption,
+figure {
+    display: block;
+    /* just in case we have any older browsers that don't recognize the HTML5 semantic elements */
+}
+
+body {
+    margin: 0;
+    /* remove any margin from body to avoid unsightly gaps. */
+    padding: 0;
+    /* ditto for padding  */
+    background-color: salmon;
 }
