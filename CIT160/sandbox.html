@@ -5,21 +5,29 @@
     <meta charset="utf-8">
     <title>Program</title>
     <script type="text/javascript">
-        function heartRate() {
-            var age = parseInt(document.getElementById('age').value);
-            var slowRate = 0.65 * (220 - age);
-            var fastRate = 0.85 * (220 - age);
+        function myFunction() {
+            var weather = document.getElementById("weather").value;
+            var text;
 
-            var output = "Your suggested heart rate should be between " + slowRate + " and " + fastRate;
-            document.getElementById('output').innerHTML = output;
+            if (weather === "snow") {
+                text = "boots";
+
+            } else if (weather === "rain") {
+                text = "galoshes";
+
+            } else if (weather === "hot") {
+                text = "sandals";
+            } else {
+                text = "shoes";
+            }
+            document.getElementById("output").innerHTML = text;
         }
-
     </script>
 </head>
 
 <body>
-    Please enter your age: <input type='text' id='age'>
-    <button type='button' onClick='heartRate()'>Find your optimum heart rate</button>
+    Please enter the weather: <input type='text' id='weather'>
+    <button type='button' onClick='myFunction()'>Click Me</button>
     <div id='output'></div>
 </body>
 </html>

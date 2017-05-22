@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function calculate() {
+            var numb1 = parseFloat(document.getElementById('num1').value);
+            var numb2 = parseFloat(document.getElementById('num2').value);
+            var operator = document.getElementById('operator').value;
+            var userAns = parseFloat(document.getElementById('userAns').value);
+            var actualAns = 0;
+
+            if (operator === "+") {
+                actualAns = numb1 + numb2;
+            } else if (operator === "-") {
+                actualAns = numb1 - numb2;
+            } else if (operator === "*") {
+                actualAns = numb1 * numb2;
+            } else if (operator === "/") {
+                actualAns = numb1 / numb2;
+            } else {
+                document.getElementById('output').innerHTML = "Invalid Information, try again";
+            }
+
+            if (userAns !== actualAns) {
+                document.getElementById('output').innerHTML = "Incorrect. Try again!";
+            } else {
+                document.getElementById('output').innerHTML = "Correct! Good job!";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Test Your Math Skills!</h1>
+    <input type='text' id='num1'>
+    <input type='text' id='operator'>
+    <input type='text' id='num2'> =
+    <input type='text' id='userAns'><br>
+    <button type='button' onClick='calculate()'>Click Me</button>
+    <div id='output'></div>
+</body>
+
+</html>
