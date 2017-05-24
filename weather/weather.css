@@ -6,15 +6,15 @@
 article,
 aside,
 footer,
-header{
+header {
     position: static;
     bottom: 0;
     left: 0;
 }
 
-#nav_bar{
+#nav_bar {
     display: flex;
-   justify-content: center;
+    justify-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: flex-end;
@@ -22,21 +22,23 @@ header{
     left: 0;
     right: 0;
 }
-#weather_head{
+
+#weather_head {
     position: static;
     right: 50%;
 }
+
 section,
 main {
     display: flex;
     flex-flow: column;
     align-items: center;
 }
+
 ul {
     display: flex;
     flex-flow: column;
     align-items: center;
-
 }
 
 figcaption,
