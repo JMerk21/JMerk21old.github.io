@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+    <!--Input= Name and Credits completed
+        Compute= Determine the year in school
+        Output= Their name and school year
+     -->
+
+    <head>
+        <title>Title Tag</title>
+        <meta name="description" content="">
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function calculate() {
+                var comp_credit = parseInt(document.getElementById('comp_credit').value);
+                var student_name = document.getElementById('student_name').value;
+                var year;
+
+                if (comp_credit >= 0 && comp_credit < 30){
+                    year = "Freshman";
+                }
+                else if (comp_credit >= 30 && comp_credit < 60){
+                    year = "Sophomore";
+                }
+                else if (comp_credit >= 60 && comp_credit < 90){
+                    year = "Junior";
+                }
+                else{
+                    year = "Senior";
+                }
+
+                var final = student_name + " is in their " + year + " year of school."
+
+
+
+                document.getElementById('output').innerHTML = final;
+            }
+
+        </script>
+    </head>
+
+    <body>
+        Please enter your name: <input type='text' id='student_name'><br>
+        Please enter your completed credits: <input type='text' id='comp_credit'><br>
+        <button type='button' onClick='calculate()'>Calculate</button>
+        <div id='output'></div>
+    </body>
+
+</html>

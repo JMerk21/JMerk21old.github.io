@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
 * {
     box-sizing: border-box;
     /* changes width property to total width instead of content width */
@@ -7,38 +8,88 @@ article,
 aside,
 footer,
 header {
-    position: static;
-    bottom: 0;
-    left: 0;
+    background-color: #f26f60;
 }
 
-#nav_bar {
+nav,
+section,
+
+/*When I try to add the image, the entire page goes all wonky :(*/
+
+main {
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-flow: column nowrap;
+    align-items: center;
+    /*background-image: url("images/sunny-winter.jpg");
+    background-size: cover;*/
+}
+
+nav ul {
+    display: flex;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    line-height: 3em;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #f26f60;
 }
 
-#weather_head {
-    position: static;
-    right: 50%;
+.title h1+h1 {
+    text-align: right;
+    margin-top: -.7em;
 }
 
-section,
-main {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+.title,
+footer {
+    background-color: #f26f60;
+    padding: .3em;
 }
 
-ul {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+.overview>*,
+.hourly,
+.currentConditions {
+    background-color: rgba(200, 200, 200, .6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+body {
+    font-size: 20px;
+    font-family: "Helvetica", Helvetica, monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Sansita, "generic", generic-family;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: #47556F;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #eff260
+}
+
+nav a:visited {
+    text-decoration: underline;
+    color: #eff260;
+}
+
+.icon2 {
+    transform: rotate(25deg);
+    display: inline-block;
 }
 
 figcaption,

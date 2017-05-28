@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <!--Input= Subtotal
+        Compute= Determines what the day of week is
+                 and if they get a discount or not
+                 and adds tax to order no matter what
+        Output= Final Subtotal
+    -->
+
+<head>
+    <title>Title Tag</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        function calculateTotal() {
+            var subtotal = parseFloat(document.getElementById('subtotal').value);
+            var dayOfWeek = new Date().getDay();
+
+            if ((subtotal > 50) && (dayOfWeek == 2 || dayOfWeek == 3)) {
+                subtotal *= .9;
+            }
+            subtotal *= 1.06;
+
+            document.getElementById('output').innerHTML = subtotal.toFixed(2);
+        }
+
+    </script>
+</head>
+
+<body>
+    Please enter your subtotal: <input type='text' id='subtotal'><br>
+    <button type='button' onClick='calculateTotal()'>Calculate</button>
+    <div id='output'></div>
+</body>
+
+</html>
