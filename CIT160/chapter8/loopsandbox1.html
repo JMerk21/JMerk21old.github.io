@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function output() {
+            var output1 = "";
+            for (var i = 0; i < 25; i++) {
+                output1 += "Hi<br>";
+            }
+            document.getElementById('output').innerHTML = output1;
+        }
+    </script>
+</head>
+
+<body>
+    <button type='button' onClick='output()'>Spam</button><br>
+    <div id='output'></div>
+</body>
+</html>
