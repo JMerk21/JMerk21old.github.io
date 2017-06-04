@@ -8,7 +8,7 @@ article,
 aside,
 footer,
 header {
-    background-color: #f26f60;
+    background-color: #A6D8DB;
 }
 
 nav,
@@ -35,7 +35,7 @@ nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    background-color: #f26f60;
+    background-color: #F07C6C;
 }
 
 .title h1+h1 {
@@ -74,17 +74,17 @@ h6 {
 
 nav a:link {
     text-decoration: none;
-    color: #47556F;
+    color: #4A4653;
 }
 
 nav a:hover {
     text-decoration: underline;
-    color: #eff260
+    color: #E7EF61;
 }
 
 nav a:visited {
     text-decoration: underline;
-    color: #eff260;
+    color: #4A4653;
 }
 
 .icon2 {
@@ -104,4 +104,10 @@ body {
     padding: 0;
     /* ditto for padding  */
     background-color: salmon;
+}
+
+@media screen and (min-width: 34em) {
+    .title {
+        width: 20em;
+    }
 }
