@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /* Input: 3 numbers
+         * Processing: List all the numbers between 'start' and 'end', if the number after being modded
+         *             evaluates to 0, add it to the list.
+         * Output:The numbers in that list
+         */
+        function program() {
+            var start = parseInt(document.getElementById('start').value);
+            var end = parseInt(document.getElementById('end').value);
+            var divisor = parseInt(document.getElementById('divisor').value);
+            var output = '0';
+
+            for (var i = start; i <= end; i++) {
+                while (i % divisor == 0) {
+                    output += i, ", ";
+                    document.getElementById('output').innerHTML = output;
+                }
+                break;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    Start: <input type="text" id="start" size="5"><br>
+    End: <input type="text" id="end" size="5"><br>
+    Divisor: <input type="text" id="divisor" size="5"><br>
+    <button type="button" onclick="program()">Click</button>
+    <div id="output"></div>
+</body>
+
+</html>

@@ -1,21 +1,27 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
-    <head>
+
+<head>
     <meta charset="utf-8">
     <title>Program</title>
     <script type="text/javascript">
-        function output() {
-            var output1 = "";
-            for (var i = 0; i < 25; i++) {
-                output1 += "Hi<br>";
-            }
-            document.getElementById('output').innerHTML = output1;
+        function makeOneHundred() {
+            var x = parseInt(document.getElementById('xBox').value);
+            var y = parseInt(document.getElementById('yBox').value);
+            var message = "False";
+            if (x == 100 || y == 100 || (x + y == 100) || (x - y == 100) || (y - x == 100) || (x * y == 100))
+                {
+                    message = "True";
+                }
+            document.getElementById('output').innerHTML = message;
         }
     </script>
 </head>
 
 <body>
-    <button type='button' onClick='output()'>Spam</button><br>
+    Enter the x: <input type="text" id="xBox"><br><br> Enter the y: <input type="text" id="yBox"><br>
+    <button type='button' onClick='makeOneHundred()'>Click Me</button><br>
     <div id='output'></div>
 </body>
+
 </html>

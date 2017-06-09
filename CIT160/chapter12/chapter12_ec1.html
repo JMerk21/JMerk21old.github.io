@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function word() {
+            var s = document.getElementById('inputBox').value;
+            var exp = s.split(" ").slice(0,3).join(' ');
+            window.alert(exp);
+        }
+    </script>
+</head>
+
+<body>
+    Please enter your text: <input type="text" id="inputBox" style="width:500px">
+    <button type='button' onClick='word()'>Click Here</button><br>
+    <div id='output'></div>
+</body>
+</html>
