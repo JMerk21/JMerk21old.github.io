@@ -16,13 +16,12 @@ body {
     padding-top: -.2em;
 }
 
-nav ul {
+nav ul, .scrollmenu{
     font-family: 'Dosis', sans-serif;
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0em;
-    margin-top: -1em;
     background-color: #f4f5f7;
     /*border: 1px solid ;*/
 }
@@ -47,6 +46,23 @@ ul li {
 .button:hover {
     background-color: #f4f5f7;
     color: #8eb4ff;
+}
+
+div.scrollmenu {
+    background-color: #f4f5f7;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #f4f5f7;
 }
 
 main {
