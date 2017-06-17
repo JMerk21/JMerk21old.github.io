@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+body {
+    background-color: #eaebed;
+}
+
 .title h1 {
-    background-color: gray;
+    font-family: 'Droid Sans', sans-serif;
+    background-color: ;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -9,26 +17,61 @@
 }
 
 nav ul {
+    font-family: 'Dosis', sans-serif;
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: .5em;
-    margin: 1em 0;
-    background-color: aqua;
+    padding: 0em;
+    margin-top: -1em;
+    background-color: #f4f5f7;
+    /*border: 1px solid ;*/
 }
 
 ul li {
-    margin: 10px;
+    margin: .2em;
+}
+
+.button {
+    background-color: #8eb4ff;
+    border: none;
+    color: white;
+    padding: .5em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #f4f5f7;
+    color: #8eb4ff;
 }
 
 main {
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.overview {
-    display: flex;
-    align-content: flex-end;
+.location {
+    justify-content: center;
     flex-wrap: wrap;
+    margin 10px;
+}
+
+.tempBox {}
+
+.tempDetails {}
+
+.currentConditions {}
+
+.hourly_hide_small {}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-right: 30em;
 }
