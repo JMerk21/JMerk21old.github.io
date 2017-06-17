@@ -1,0 +1,34 @@
+.title h1 {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -.7em;
+    padding: .5em;
+    padding-top: -.2em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: .5em;
+    margin: 1em 0;
+    background-color: aqua;
+}
+
+ul li {
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.overview {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}

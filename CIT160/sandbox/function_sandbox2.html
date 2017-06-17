@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Program</title>
+        <script type="text/javascript">
+            function add(num1, num2) {
+                var sum = num1 + num2;
+                return sum;
+            }
+
+            function sub(num1, num2) {
+                var diff = num1 - num2;
+                return diff;
+            }
+
+            function fancy(num1, num2, num3) {
+                var sum = add(num1, num2);
+                var diff = sub(sum, num3);
+
+                return diff;
+            }
+
+            function superFancy(){
+                var a = parseInt(document.getElementById('input1').value);
+                var b = parseInt(document.getElementById('input2').value);
+                var c = parseInt(document.getElementById('input3').value);
+
+                var d = fancy(a, b, c);
+
+                document.getElementById('outputDiv').innerHTML = d;
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <input type='text' id='input1'><br>
+        +<br>
+        <input type='text' id='input2'><br>
+        -<br>
+        <input type='text' id='input3'><br>
+        <button type="button" onclick="superFancy()">Click</button>
+        <div id="outputDiv"></div>
+    </body>
+
+</html>

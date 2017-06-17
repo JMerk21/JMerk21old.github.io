@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> </title>
+<script type="text/javascript">
+    /*
+    Input: "n" which is the number the user chooses.
+    Processing: Add together all odd numbers between 1 and the number the user put in.
+    Output: Sum total of the odd numbers
+
+    Write a defining table and a program to print all powers of 2 from 2^0 up to 2^31, inclusive. In other words, your program should output this series: 1, 2, 4, 8, … 2147483648
+    2^0 2^1 2^2  */
+    function exponents(){
+
+    var math;
+    for (var ex = 0; ex <=31; ex++){
+        math = 2 ** ex;
+        document.getElementById("output").innerHTML += math + "<br>";
+
+    }
+    }
+</script>
+</head>
+<body>
+Exponents<button type="button" onclick="exponents()">2^ of something</button>
+<div id="output"></div>
+</body>
+</html>
