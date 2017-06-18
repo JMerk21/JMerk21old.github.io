@@ -22,6 +22,7 @@ nav ul, .scrollmenu{
     justify-content: center;
     list-style: none;
     padding: 0em;
+    margin: .5em;
     background-color: #f4f5f7;
     /*border: 1px solid ;*/
 }
@@ -34,7 +35,7 @@ ul li {
     background-color: #8eb4ff;
     border: none;
     color: white;
-    padding: .5em 2em;
+    padding: .5em 1em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
