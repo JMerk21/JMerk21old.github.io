@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function doPayment() {
+            var principal = parseFloat(document.getElementById('principal').value);
+            var interest = parseFloat(document.getElementById('annualRate').value);
+            var years = parseInt(document.getElementById('numYears').value);
+            var payPerYear = parseInt(document.getElementById('perYear').value);
+
+            var output = computePayment(principal, annualRate, years, payPerYear);
+
+            var outputBox = document.getElementById('outputBox1');
+            outputBox.value = output;
+        }
+
+        function doBalance() {
+
+        }
+
+        function computePayment(principal, annualRate, years, payPerYear) {
+            var payment = (principal * payPerYear) / (1 - Math.pow((1 + years), -(years * payPerYear)))
+            return payment;
+        }
+
+        function computeBalance(principal, annualRate, years, payPerYear, numberOfPaymentsPaidToDate) {
+
+        }
+
+        function reset() {
+            document.getElementById("text").reset();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Investment Calculator</h1>
+    <form name="myform">
+        Amount Borrowed (principal): <input type="text" id="principal"><br>
+        Annual Interest Rate (example: .065):<input type="text" id="annualRate"><br>
+        Number of years: <input type="text" id="numYears"><br>
+        Payments per year: <input type="text" id="perYear"><br>
+        <button type="button" onclick="doPayment()">Compute Payment</button> <input type="text" name="outputBox1" id="outputBox1" readonly/><br>
+        Number of payments paid to date: <input type="text" id="toDate"><br>
+        <button type="button" onclick="doBalance()">Compute Payoff amount</button> <input type="text" name="outputBox2" id="outputBox2" readonly/><br>
+        <input type="button" name="reset_form" value="Reset" onclick="reset()">
+    </form>
+</body>
+
+</html>

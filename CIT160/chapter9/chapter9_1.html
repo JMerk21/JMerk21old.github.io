@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function doInputOutput() {
+            var tempF = parseFloat(document.getElementById('tempF').value);
+            var speed = parseFloat(document.getElementById('windSpeed').value);
+
+            var output = windChill(tempF, speed);
+
+            document.getElementById('outputDiv').innerHTML = output;
+        }
+
+        function windChill(tempF, speed) {
+
+            var chill = 35.74 + (.6215 * tempF) - (35.75 * Math.pow(speed, .16)) + ((.4275 * tempF) * Math.pow(speed, .16));
+
+            return chill;
+        }
+
+    </script>
+</head>
+
+<body>
+    Temperature in Fahrenheit: <input type="text" id="tempF"><br> Wind Speed: <input type="text" id="windSpeed">
+    <button type="button" onclick="doInputOutput()">Click</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>
