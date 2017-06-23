@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang='en-us'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Bowling</title>
+        <script type='text/JavaScript'>
+
+            var rolls;
+            var currentRoll;
+
+            function isStrike(rollIndex){
+                if (rolls[rollIndex] == 10){
+                    return true;
+                }
+                return false;
+            }
+
+            function isSpare(rollIndex){
+                var total = rolls[rollIndex]+rolls[rollIndex + 1];
+                if (total == 10){
+                    return true;
+                }
+                return false;
+            }
+
+            function roll(pinsKnockedDown){
+                rolls[currentRoll++] = pinsKnockedDown;
+            }
+
+            function score(){
+                var total = 0;
+                var rollIndex = 0;
+                for (var frame = 1; frame <= 10; frame++){
+                    if (isStrike(rollIndex)){
+                        total += 10 + strikeBonus(rollIndex);
+                        rollIndex++;
+                    }
+                    else if(isSpare(rollIndex)){
+                        total += 10 + spareBonus(rollIndex);
+                        rollIndex += 2;
+                    }
+                    else {
+                        total += totalPinsKnockedDown(rollIndex);
+                        rollIndex += 2;
+                    }
+                }
+
+                return total;
+            }
+
+            function totalPinsKnockedDown(rollIndex){
+                var total = rolls[rollIndex]+rolls[rollIndex + 1];
+                return total;
+            }
+
+            function spareBonus(rollIndex){
+                return rolls[rollIndex + 2];
+            }
+
+            function strikeBonus(rollIndex){
+                var total = rolls[rollIndex + 1] + rolls[rollIndex + 2];
+                return total;
+            }
+
+            function showRolls(){
+                window.alert(rolls);
+            }
+
+            /******************* TESTING ******************/
+            function assertScore(correct,calculated){
+                if(correct!=calculated){
+                    window.alert("ERROR: Answer was "+calculated+" but should have been "+correct);
+                }
+                else {
+                    window.alert("Correct");
+                }
+            }
+
+            function initializeGame(){
+                rolls = new Array(21);
+                currentRoll = 0;
+            }
+
+            function allGutterBalls(){
+                initializeGame();
+                for(var i=0;i<20;i++){
+                    roll(0);
+                }
+                showRolls();
+            }
+
+            function allOnes(){
+                initializeGame();
+                for(var i=0;i<20;i++){
+                    roll(1);
+                }
+                showRolls();
+            }
+            function oneSpare(){
+                initializeGame();
+                roll(5);
+                roll(5);
+                roll(6);
+                roll(2);
+                for(var i=0;i<16;i++){
+                    roll(0);
+                }
+                showRolls();
+            }
+
+            function allStrikes(){
+                initializeGame();
+                for(var i=0;i<12;i++){
+                    roll(10);
+                }
+                showRolls();
+            }
+            function oneStrike(){
+                initializeGame();
+                roll(10);
+                roll(3);
+                roll(4);
+                for(var i=0;i<16;i++){
+                    roll(0);
+                }
+                showRolls();
+            }
+            function sampleGame(){
+                initializeGame();
+                roll(10);
+                roll(10);
+                roll(10);
+                roll(8);
+                roll(2);
+                roll(9);
+                roll(1);
+                roll(6);
+                roll(2);
+                roll(10);
+                roll(10);
+                roll(8);
+                roll(2);
+                roll(9);
+                roll(1);
+                roll(10);
+                showRolls();
+            }
+
+            allGutterBalls();
+            assertScore(0,score());
+            allOnes();
+            assertScore(20,score());
+            oneStrike();
+            assertScore(24,score());
+            allStrikes();
+            assertScore(300,score());
+            oneSpare();
+            assertScore(24,score());
+            sampleGame();
+            assertScore(208,score());
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

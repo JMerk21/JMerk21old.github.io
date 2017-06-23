@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        var measures = [4.7, -3, 2.1, 0, 7.2];
+        var y = measures[0] + measures[1];
+        window.alert(y);
+
+        function addAll(arr) {
+            var potato = 0;
+            for (var i = 0; i < arr.length; i++) {
+                potato += arr[i];
+            }
+            return potato;
+        }
+
+        var x = addAll(measures);
+        window.alert(x);
+
+        var ourCosts = [5, 5, 3, 2.5, 10];
+
+        function markup(list, percentage) {
+            var total = 0;
+            for (var i = 0; i < list.length; i++) {
+                list[i] *= 1 + percentage;
+            }
+            return list;
+        }
+
+        var retailCost = markup(ourCosts, .25);
+        window.alert(retailCost);
+
+        function discount(list, dollars) {
+            for (var i = 0; i < list.length; i++) {
+                list[i] -= dollars;
+                if (list[i] < 0) {
+                    list[i] = 0;
+                }
+            }
+            return list;
+        }
+
+        var discountCost = discount(retailCost);
+        window.alert(discountCost);
+
+        function expensive(dollar, arr) {
+            var truthful = new Array(arr.length);
+
+            for (var i = 0; i < arr.length; i++) {
+                truthful[i] = arr[i] > dollar;
+            }
+            return truthful;
+        }
+
+        var stuff = expensive(7, retailCost);
+        window.alert(stuff);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

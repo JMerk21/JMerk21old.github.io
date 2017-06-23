@@ -11,7 +11,7 @@
             var years = parseInt(document.getElementById('numYears').value);
             var payPerYear = parseInt(document.getElementById('perYear').value);
 
-            var output = computePayment(principal, annualRate, years, payPerYear);
+            var output = computePayment(principal, interest, years, payPerYear);
 
             var outputBox = document.getElementById('outputBox1');
             outputBox.value = output;
