@@ -6,27 +6,30 @@ var instructions = [{
         },
         "choiceText": "choose 1",
         "title": "The Adventure Begins",
-        "description": "This is where you setup your initial story"
+        "description": "This is where you setup your initial story",
+        "ending": false
     },
-                    {
-            "id": 2,
-            "choices": {
-                "first": 4,
-                "second": 5
-            },
-            "choiceText": "Go Left",
-            "title": "The long hallway",
-            "description": "Describe the current setting"
+    {
+        "id": 2,
+        "choices": {
+            "first": 4,
+            "second": 5
         },
-        {
-            "id": 3,
-            "choices": {
-                "first": 6,
-                "second": 7
-            },
-            "choiceText": "Go Right",
-            "title": "The hungry beast",
-            "description": "This is probably not going to end well."
+        "choiceText": "Go Left",
+        "title": "The long hallway",
+        "description": "Describe the current setting",
+        "ending": false
+        },
+    {
+        "id": 3,
+        "choices": {
+            "first": 6,
+            "second": 7
+        },
+        "choiceText": "Go Right",
+        "title": "The hungry beast",
+        "description": "This is probably not going to end well.",
+        "ending": true
         }
                    ];
 
@@ -64,18 +67,19 @@ function getItem(instructions, id) {
     for (var i = 0; i < instructions.length; i++){
 
     }
-return instructions[i];
+    return id;
 }
 
 //updateElement: updates the contents of an element on the screen
 //requires the id of the div to update, and the new contents.
-function updateElement(){
+function updateElement() {
 
 }
 
 //updateButton: sets the onclick event for a button with the id of the item it chooses
-function updateButton(buttonId, choiceId){
-    var button =
+function updateButton(buttonId, choiceId) {
+    var button = document.getElementById(buttonId);
+    button.setAttribute('onclick', "nextStep(" + choiceId + ")");
 }
 
 
