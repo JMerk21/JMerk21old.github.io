@@ -11,23 +11,36 @@
             var years = parseInt(document.getElementById('numYears').value);
             var payPerYear = parseInt(document.getElementById('perYear').value);
 
-            var output = computePayment(principal, interest, years, payPerYear);
+            var output = Math.round(computePayment(principal, interest, years, payPerYear) * 100) / 100;
 
             var outputBox = document.getElementById('outputBox1');
             outputBox.value = output;
         }
 
         function doBalance() {
+            var principal = parseFloat(document.getElementById('principal').value);
+            var interest = parseFloat(document.getElementById('annualRate').value);
+            var years = parseInt(document.getElementById('numYears').value);
+            var payPerYear = parseInt(document.getElementById('perYear').value);
+            var numberOfPaymentsPaidToDate = parseFloat(document.getElementById('toDate').value);
+            var payment = computePayment(principal, interest, years, payPerYear);
 
+            var output = Math.round(computeBalance(principal, interest, years, payPerYear, payment, numberOfPaymentsPaidToDate) * 100) / 100;
+
+            var outputBox = document.getElementById('outputBox2');
+            outputBox.value = output;
         }
 
-        function computePayment(principal, annualRate, years, payPerYear) {
-            var payment = (principal * payPerYear) / (1 - Math.pow((1 + years), -(years * payPerYear)))
+        function computePayment(principal, interest, years, payPerYear) {
+            var payment = (principal * (interest / payPerYear)) / (1 - Math.pow((1 + interest / payPerYear), -(years * payPerYear)));
             return payment;
         }
 
-        function computeBalance(principal, annualRate, years, payPerYear, numberOfPaymentsPaidToDate) {
+        function computeBalance(principal, interest, years, payPerYear, payment, numberOfPaymentsPaidToDate) {
+            var r = (interest / payPerYear);
+            var amountLeft = (principal * Math.pow((1 + r), numberOfPaymentsPaidToDate)) - ((payment * (Math.pow((1 + r), numberOfPaymentsPaidToDate) - 1)) / r)
 
+            return amountLeft;
         }
 
         function reset() {
