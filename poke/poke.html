@@ -1,15 +1,38 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
 
-    <head>
-        <title>Pokemon API</title>
-        <meta name="description" content="">
-        <meta charset="utf-8">
-        <script src="/poke/poke.js"></script>
-        <link rel="stylesheet" href="/poke/poke.css">
-    </head>
+<head>
+    <title>Pokemon API</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/poke/poke.css">
+</head>
 
-    <body>
+<body>
+    <h1><a href="https://pokeapi.co/" target="_blank">Pokemon API</a> Exercise</h1>
+    <main>
+        <div class="listbox">
 
-    </body>
+            <ul id="monList">
+                <li>Dratini</li>
+            </ul>
+            <a id="prev" href="#">Prev</a> <a id="next" href="#">Next</a>
+        </div>
+        <div id="detailsbox" class="hidden">
+
+            <dl>
+                <dt>Name:</dt>
+                <dd class="name"></dd>
+                <dt>Generation:</dt>
+                <dd class="generation"></dd>
+                <dt>Type:</dt>
+                <dd class="type"></dd>
+            </dl>
+        </div>
+    </main>
+
+
+    <script src="/poke/poke.js"></script>
+</body>
+
 </html>
