@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Program</title>
+        <script type="text/javascript">
+            function getMiddle(list){
+                if(list.length % 2  == 0){
+                    var mid = list.length / 2;
+                    var otherMid = mid - 1;
+                    var average = (list[mid] + list[otherMid]) / 2;
+                    return average;
+                }
+                else{
+                    var mid = (list.length - 1) / 2;
+                    return list[mid];
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+    </body>
+
+</html>
