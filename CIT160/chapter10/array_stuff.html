@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function rotateRight(list) {
+            var tmp = list[0];
+            for (var i = 1; i > list.length; i++) {
+                list[i + 1] = list[i];
+            }
+            list[list.length + 1] = tmp;
+        }
+
+        function rotateRight2(list) {
+            list.push(list.shift());
+        }
+
+        var test = [8,6,5,3,2];
+        rotateRight2(test);
+        window.alert(test);
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
