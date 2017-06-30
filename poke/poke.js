@@ -9,10 +9,10 @@ function getJSON(url) {
 }
 
 function fetchMons() {
-    var url = "//pokeapi.co/api/v2/type/16/";
+    var url = "//pokeapi.co/api/v2/type/1/";
     getJSON(url).then(function (data) {
         console.log(data);
-        var results = data.results;
+        var results = data.pokemon;
         var monListElement = document.getElementById('monList');
         monListElement.innerHTML = "";
 
@@ -24,12 +24,22 @@ function fetchMons() {
             link.setAttribute('href', mons.url);
 
             link.innerHTML = mons.name;
+            link.addEventListener('click', function(event){
+               event.preventDefault();
+                getMonDetails(mons.url);
+            });
 
             listItem.appendChild(link);
 
             monListElement.appendChild(listItem);
         });
     });
+}
+
+function getMonDetails(url) {
+    getJSON(url).then(function (data) {
+        console.log(data);
+    })
 }
 
 fetchMons();
