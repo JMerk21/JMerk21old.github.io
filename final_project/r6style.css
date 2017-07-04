@@ -3,9 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
 body {
-    background-color: white;
+    background-color: #595959;
 }
 
 .content {
@@ -16,7 +15,7 @@ body {
 }
 
 header>h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 3em;
     display: flex;
     align-content: center;
@@ -55,9 +54,26 @@ nav ul {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-main>h2{
-    font-family: 'Ubuntu', sans-serif;
-
+#playerName {
+    width: 95%;
+    font-family: 'Lato', sans-serif;
 }
 
+#playerImg {
+    max-width: 100%;
+    height: auto;
+}
 
+#playerInfo {
+    font-family: 'Open Sans', sans-serif;
+    padding:10px;
+    background: white;
+    background-clip: content-box;
+    background-size: auto;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
