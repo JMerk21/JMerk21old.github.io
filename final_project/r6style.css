@@ -1,98 +1,167 @@
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-    @import url('https://fonts.googleapis.com/css?family=Raleway');
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
-    @import url('https://fonts.googleapis.com/css?family=Lato');
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-    body {
-        background: url(images/background1.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-color: #011715;
-    }
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+        @media only screen and (max-width: 640px) {
+            header {
+                position: relative;
+            }
+            #menu-icon {
+                display: inline-block;
+            }
+            nav ul,
+            nav:active ul {
+                display: none;
+                position: absolute;
+                padding: 20px;
+                background: #fff;
+                border: 5px solid #444;
+                right: 20px;
+                top: 60px;
+                width: 50%;
+                border-radius: 4px 0 4px 4px;
+            }
+            nav li {
+                text-align: center;
+                width: 100%;
+                padding: 10px 0;
+                margin: 0;
+            }
+            nav:hover ul {
+                display: block;
+            }
+        }
 
-    .content {
-        max-width: 960px;
-        margin: auto;
-        background-color: #f4f4f4;
-        box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 12px 0 rgba(0, 0, 0, 0.19);
-    }
+        body {
+            background: url(images/background1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #011715;
+        }
 
-    header>h1 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 3em;
-        display: flex;
-        align-content: center;
-        justify-content: flex-start;
-        width: 95%;
-        margin: 0 auto 0 auto;
-    }
+        .content {
+            max-width: 960px;
+            min-height: 900px;
+            margin: auto;
+            margin-top: 4.6em;
+            background-color: #f4f4f4;
+            box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 12px 0 rgba(0, 0, 0, 0.19);
+        }
+        /*header>h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3em;
+            display: flex;
+            align-content: center;
+            justify-content: flex-start;
+            width: 95%;
+            margin: 0 auto 0 auto;
+        }*/
 
-    nav ul {
-        font-family: 'Raleway', sans-serif;
-        display: flex;
-        list-style: none;
-        width: 95%;
-        justify-content: space-between;
-        align-content: center;
-        padding: .3em;
-        margin: 0 auto 0 auto;
-        background-color: white;
-    }
+        header {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background: #fff;
+            width: 100%;
+            height: 76px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
 
-    .button {
-        background-color: white;
-        border: none;
-        color: black;
-        padding: .5em 1em;
-        text-align: center;
-        vertical-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1em;
-        margin: 2px 2px;
-        cursor: pointer;
-    }
+        #menu-icon {
+            display: hidden;
+            width: 40px;
+            height: 40px;
+            background: black url(/final_project/Respond-Menu/Respond-Menu/img/menu-icon.png) center;
+        }
 
-    .button:hover {
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    }
+        a:hover#menu-icon {
+            background-color: #444;
+            border-radius: 4px 4px 0 0;
+        }
 
-    #playerName {
-        width: 95%;
-        font-family: 'Lato', sans-serif;
-    }
+        #logo {
+            display: flex;
+            position: relative;
+            width: 95%;
+        }
 
-    #playerImg {
-        max-width: 100%;
-        height: auto;
-    }
+        nav ul {
+            font-family: 'Raleway', sans-serif;
+            display: flex;
+            list-style: none;
+            width: 95%;
+            justify-content: space-around;
+            align-content: flex-start;
+            padding: .3em;
+            margin: 0 auto 0 auto;
+            background-color: white;
+        }
 
-    #playerInfo {
-        font-family: 'Open Sans', sans-serif;
-        padding: 10px;
-        background: white;
-        background-clip: content-box;
-        background-size: auto;
-    }
+        .button {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: .5em 1em;
+            text-align: center;
+            vertical-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
 
-    a:link,
-    a:visited {
-        text-decoration: none;
-        color: black;
-    }
+        .button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
 
-    .teamLogo {
-        display: flex;
-        align-content: flex-start;
-        width: 95%;
-        justify-content: space-between;
-        margin: 0 auto 0 auto;
-    }
+        #playerName {
+            width: 95%;
+            font-family: 'Lato', sans-serif;
+        }
 
-    img {
-        width: 100%;
-        height: 100%;
-        max-width: 200px;
+        #playerImg {
+            max-width: 100%;
+            height: auto;
+        }
 
-    }
+        #playerInfo {
+            font-family: 'Open Sans', sans-serif;
+            padding: 10px;
+            background: white;
+            background-clip: content-box;
+            background-size: auto;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        .teamLogo {
+            display: flex;
+            align-content: flex-start;
+            flex-flow: row;
+            width: 95%;
+            justify-content: space-between;
+            margin: 0 auto 0 auto;
+        }
+
+        .verticalLogo {}
+
+        .contLogo {}
+
+        .elevateLogo {}
+
+        .flipLogo {}
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 200px;
+        }
