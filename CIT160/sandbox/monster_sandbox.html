@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function monster(name, numEyes, onFire, canFly, birthday) {
+            this.name = name;
+            this.numEyes = numEyes;
+            this.onFire = onFire;
+            this.canFly = canFly;
+            this.birthday = birthday;
+            this.isFlying = false;
+        }
+
+        monster.prototype.fly = function(){
+            if(this.canFly && !this.isFlying){
+                this.isFlying = true;
+                console.log(this.name + ' is now flying');
+            }
+            else{
+                console.log(this.name + " can't fly");
+                if(this.isFlying){
+                    console.log(this.name + " is already flying");
+                }
+            }
+
+        }
+
+        monster.prototype.land = function(position){
+            if(this.isFlying){
+                this.isFlying = false;
+                console.log(this.name + " landed on " + position);
+            }
+            else{
+                console.log(this.name + " isn't flying");
+            }
+        }
+
+        var carol = new monster("Carol", 12, true, true, "March 2, 1932");
+        console.log(carol.onFire);
+        carol.fly();
+        carol.fly();
+        carol.land("the South Pole");
+
+
+        var kkarle = new monster("Kkarle", 107, true, false, "July 6, 1932");
+        console.log(kkarle.birthday);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
