@@ -114,11 +114,45 @@
 
         .teamLogo {
             display: flex;
+            flex-wrap: nowrap;
             align-content: flex-start;
             flex-flow: row;
-            width: 95%;
+            max-width: 200px;
+            width: 100%;
             justify-content: space-between;
             margin: 0 auto 0 auto;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 200px;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .teamLogo:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
         }
 
         .verticalLogo {}
