@@ -3,6 +3,12 @@
         @import url('https://fonts.googleapis.com/css?family=Roboto');
         @import url('https://fonts.googleapis.com/css?family=Lato');
         @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+        @media only screen and (min-width: 768px) {
+            .toggle {
+                display: flex;
+            }
+        }
+
         .toggle {
             display: none;
         }
@@ -37,15 +43,6 @@
             box-shadow: -2px 5px 5px -1px rgba(0, 0, 0, 0.3);
         }
 
-        #menu-icon {
-            display: hidden;
-        }
-
-        a:hover#menu-icon {
-            background-color: #444;
-            border-radius: 4px 4px 0 0;
-        }
-
         #logo {
             display: flex;
             position: relative;
@@ -78,8 +75,9 @@
             vertical-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 1em;
-            margin: 2px 2px;
+            font-size: 1.2em;
+            margin: 4px 4px;
+            margin-bottom: 2px;
             cursor: pointer;
             min-height: 2.5em;
         }
@@ -134,8 +132,8 @@
             height: 100%;
             width: 100%;
             opacity: 0;
-            transition: .5s ease;
-            background-color: #008CBA;
+            transition: .4s ease;
+            background-color: #225185;
         }
 
         .teamLogo:hover .overlay {
@@ -143,6 +141,7 @@
         }
 
         .text {
+            font-family: 'Lato', sans-serif;
             display: flex;
             justify-content: center;
             align-content: center;
@@ -151,6 +150,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
+            right: 50%;
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
         }
