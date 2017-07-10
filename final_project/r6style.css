@@ -3,35 +3,9 @@
         @import url('https://fonts.googleapis.com/css?family=Roboto');
         @import url('https://fonts.googleapis.com/css?family=Lato');
         @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-        /* @media only screen and (max-width: 640px) {
-            header {
-                position: relative;
-            }
-            #menu-icon {
-                display: inline-block;
-            }
-            nav ul,
-            nav:active ul {
-                display: none;
-                position: absolute;
-                padding: 20px;
-                background: #fff;
-                border: 5px solid #444;
-                right: 20px;
-                top: 60px;
-                width: 50%;
-                border-radius: 4px 0 4px 4px;
-            }
-            nav li {
-                text-align: center;
-                width: 100%;
-                padding: 10px 0;
-                margin: 0;
-            }
-            nav:hover ul {
-                display: block;
-            }
-        }*/
+        .toggle {
+            display: none;
+        }
 
         body {
             background: url(images/background1.jpg);
@@ -49,15 +23,6 @@
             background-color: #f4f4f4;
             box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 12px 0 rgba(0, 0, 0, 0.19);
         }
-        /*header>h1 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 3em;
-            display: flex;
-            align-content: center;
-            justify-content: flex-start;
-            width: 95%;
-            margin: 0 auto 0 auto;
-        }*/
 
         header {
             display: flex;
@@ -68,7 +33,8 @@
             height: 5em;
             position: fixed;
             top: 0;
-            left: 0;
+            right: 0;
+            box-shadow: -2px 5px 5px -1px rgba(0, 0, 0, 0.3);
         }
 
         #menu-icon {
@@ -90,12 +56,17 @@
             font-family: 'Raleway', sans-serif;
             display: flex;
             list-style: none;
-            width: 100%;
-            justify-content: space-between;
-            align-content: flex-start;
+            width: 50%;
+            height: 4.4em;
+            justify-content: space-around;
+            align-content: center;
             padding: .3em;
             margin: 0 auto 0 auto;
             background-color: white;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
         }
 
         .button {

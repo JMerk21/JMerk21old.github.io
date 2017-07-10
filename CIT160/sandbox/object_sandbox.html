@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Program</title>
+    <script type="text/javascript">
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+        }
+
+        function LivingThing(name, health, magicPoints, fight, power) {
+            this.name = name;
+            this.health = health;
+            this.magicPoints = magicPoints;
+            this.fight = fight;
+            this.hunger = 0;
+            this.power = power;
+        }
+
+        function Creature(config) {
+            this.name = config.name;
+            this.health = config.health;
+            this.maxHealth = config.health;
+            this.magicPoints = config.magicPoints;
+            this.fight = config.fight || "attacks";
+            this.hunger = 0;
+            this.power = config.power;
+            this.alive = true;
+
+        }
+
+        Creature.prototype.attack = function(target) {
+            this.randomDamage(target, 3);
+        }
+        Creature.prototype.randomDamage = function(target, randomPoints) {
+            console.log(this.name + " " + this.fight + " " + target.name);
+            var damage = getRandomInt(this.power - randomPoints, this.power + randomPoints);
+            damage = Math.max(damage, 0);
+            if (damage == 0) {
+                console.log(this.name + " misses " + target.name);
+            } else {
+                console.log(this.name + " hurts " + target.name + " for " + damage + " damage.");
+                target.updateHealth(-damage);
+            }
+        }
+
+        Creature.prototype.updateHealth = function(points) {
+            this.health += points;
+            if (this.health <= 0) {
+                this.alive = false;
+                console.log(this.name + " died");
+            } else if (this.health > this.maxHealth) {
+                this.health = this.maxHealth;
+            }
+        }
+
+        Creature.prototype.takeNap = function() {
+            this.updateHealth(1);
+        }
+
+        function Boss(config) {
+            Creature.call(this, config);
+            this.superFight = config.superFight || "goes super saiyan on";
+            this.anger = config.anger;
+            this.superFightCountdown = config.superFightCountdown;
+        }
+
+        Boss.prototype = Object.create(Creature.prototype);
+        Boss.prototype.constructor = Boss;
+
+        Boss.prototype.superAttack = function(target, randomPoints) {
+            console.log(this.name + " " + this.superFight + " " + target.name);
+            var damage = getRandomInt(this.power - randomPoints, this.power + randomPoints);
+            damage = Math.max(damage, 0);
+            if (damage == 0) {
+                console.log(this.name + " misses " + target.name);
+            } else {
+                console.log(this.name + " hurts " + target.name + " for " + damage + " damage.");
+                target.updateHealth(-damage);
+            }
+        }
+
+        Boss.prototype.attack = function(target) {
+            if (this.timeToSuperAttack()) {
+                this.superAttack(target, 5);
+            } else {
+                this.randomDamage(target, 3);
+            }
+        }
+
+        Boss.prototype.timeToSuperAttack = function() {
+            if (this.anger++ > this.superFightCountdown) {
+                this.anger = 0;
+                return true;
+            }
+            return false;
+        }
+
+        function Battle(hero, opponent) {
+            var someoneDied = false;
+            while (hero.alive && opponent.alive) {
+                hero.attack(opponent);
+                if (opponent.alive) {
+                    opponent.attack(hero);
+                }
+            }
+            if (hero.alive) {
+                console.log(hero.name + " wins this battle");
+            } else {
+                console.log(opponent.name + " wins this battle");
+            }
+        }
+
+        var lion = new Creature({
+            name: "Leo",
+            health: 50,
+            magicPoints: 0,
+            fight: "claws and bites",
+            power: 3
+        });
+        console.log(lion.name);
+        console.log(lion.health);
+
+        var hero = new Creature({
+            name: "Avatar",
+            health: 100,
+            magicPoints: 0,
+            fight: "punches",
+            power: 2
+        });
+        lion.attack(hero);
+        console.log(hero.health);
+
+        var dragon = new Boss({
+            name: "Smaug",
+            health: 15,
+            magicPoints: 50,
+            fight: "breathes fire at",
+            power: 20,
+            superFight: "incinerates",
+            superFightCountdown: 2,
+            anger: 0
+        })
+        dragon.attack(lion);
+        console.log(lion.health);
+
+        Battle(hero, dragon);
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
