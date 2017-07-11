@@ -26,8 +26,14 @@
             min-height: 900px;
             margin: auto;
             margin-top: 4.6em;
-            background-color: #f4f4f4;
+            background-color: #E5E7EA;
             box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.24), 0 10px 12px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 200px;
         }
 
         header {
@@ -156,15 +162,26 @@
             -ms-transform: translate(-50%, -50%);
         }
 
-        .teamPageLogo {
+        .teamContainer {
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .teamPageLogo {
             min-width: 300px;
             width: 100%;
             height: 100%;
+            position: static;
         }
 
-        img {
-            width: 100%;
-            height: 100%;
-            max-width: 200px;
+        .teamNamePage {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 2em;
+        }
+
+        .teamPlayers {
+            max-width: 99px;
+            max-height: 99px;
         }
