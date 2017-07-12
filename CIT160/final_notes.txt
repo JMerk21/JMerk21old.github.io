@@ -1,0 +1,48 @@
+CIT160 review
+
+5 parts of computer and what they do
+
+basic html5 template
+
+var a = 1, b =12, c = -2;
+var result = a + b / 6 % 4 * c;
+2%4 = 2
+answer = -3
+
+var i = 0;
+while (i < 103) {
+window.alert("Snow");
+}
+
+no i++ = infinite times
+
+know what header, signature, calling function
+
+benefits of using functions
+reuse variables
+reuse functions
+less code
+easier to read
+less bugs
+
+function getSecondToLast(list){
+return list[list.length-2];
+}
+
+function golfScore(hand) {
+var score = 0;
+for (var i = 0; i < hand.length; i++) {
+if (hand[i] === "King" || hand[i] === "Queen" || hand[i] === "Jack") {
+score += 10;
+} else {
+score += hand[i];
+}
+}
+return score;
+}
+
+
+
+
+
+

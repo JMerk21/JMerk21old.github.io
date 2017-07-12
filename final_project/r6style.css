@@ -95,20 +95,38 @@
         #playerName {
             width: 95%;
             font-family: 'Lato', sans-serif;
+            margin-left: 25px;
         }
 
         #playerImg {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 25px;
             max-width: 100%;
             height: auto;
         }
 
-        #playerInfo {
+        .playerInfo {
             font-family: 'Open Sans', sans-serif;
-            padding: 10px;
+            font-size: 1.1em;
+            width: 95%;
+            box-shadow: -2px 5px 5px -1px rgba(0, 0, 0, 0.3);
             background: white;
             background-clip: content-box;
             background-size: auto;
+            margin-left: 25px;
         }
+
+        #playerSocialMenu {
+            list-style: none;
+
+
+        }
+
+.socialLogo{
+    max-height: 20px;
+    max-width: 20px;
+}
 
         a:link,
         a:visited {
@@ -164,9 +182,11 @@
 
         .teamContainer {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .teamOverview {
+            align-self: center;
         }
 
         .teamPageLogo {
@@ -174,14 +194,27 @@
             width: 100%;
             height: 100%;
             position: static;
+            margin-top: 15em;
+            margin-left: 3em;
         }
 
         .teamNamePage {
             font-family: 'Open Sans', sans-serif;
             font-size: 2em;
+            margin-left: 10em;
+            margin-bottom: 15em;
+        }
+
+        .playerContainer {
+            flex-wrap: nowrap;
+            flex-flow: row;
+            margin: 2px;
         }
 
         .teamPlayers {
             max-width: 99px;
             max-height: 99px;
+            margin: 10px;
+            flex-wrap: nowrap;
+            flex-flow: row;
         }
