@@ -258,11 +258,11 @@
             margin: 0 auto 0 auto;
         }
 
-        footer {
-            position: relative;
+        .footer {
+            position: absolute;
             bottom: 0;
-            width: 50%;
-            height: 20px;
-            margin: auto;
-            padding: inherit;
+            right: 0;
+            left: 0;
+            padding: 1em;
+            text-align: center;
         }
