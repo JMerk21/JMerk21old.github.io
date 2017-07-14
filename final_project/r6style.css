@@ -91,18 +91,6 @@
         .button:hover {
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         }
-        /*.newsBox {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.1em;
-            width: 95%;
-            box-shadow: -2px 5px 5px -1px rgba(0, 0, 0, 0.3);
-            background: white;
-            background-clip: content-box;
-            background-size: auto;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-        }*/
 
         .newsButton {
             font-family: 'Open Sans', sans-serif;
@@ -271,10 +259,10 @@
         }
 
         footer {
-            display: flex;
-            justify-content: center;
-            position: absolute;
+            position: relative;
             bottom: 0;
             width: 50%;
             height: 20px;
+            margin: auto;
+            padding: inherit;
         }
