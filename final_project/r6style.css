@@ -51,7 +51,7 @@
 
         #logo {
             display: flex;
-            position: relative;
+            position: static;
             width: 95%;
         }
 
@@ -114,19 +114,17 @@
             background: white;
             background-clip: content-box;
             background-size: auto;
-            margin-left: 25px;
+            margin: auto;
         }
 
         #playerSocialMenu {
             list-style: none;
-
-
         }
 
-.socialLogo{
-    max-height: 20px;
-    max-width: 20px;
-}
+        .socialLogo {
+            max-height: 20px;
+            max-width: 20px;
+        }
 
         a:link,
         a:visited {
@@ -136,8 +134,8 @@
 
         .teamLogo {
             display: flex;
-            flex-wrap: nowrap;
-            align-content: flex-start;
+            flex-wrap: wrap;
+            align-content: center;
             flex-flow: row;
             max-width: 200px;
             width: 100%;
@@ -181,8 +179,12 @@
         }
 
         .teamContainer {
+            font-family: 'Open Sans', sans-serif;
             display: flex;
-            justify-content: center;
+            margin: 0 auto 0 auto;
+            font-size: 40px;
+            padding: 0 60px 0 60px;
+            justify-content: space-between;
         }
 
         .teamOverview {
@@ -215,6 +217,9 @@
             max-width: 99px;
             max-height: 99px;
             margin: 10px;
-            flex-wrap: nowrap;
-            flex-flow: row;
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            height: auto;
+            margin: 0 auto 0 auto;
         }
