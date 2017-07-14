@@ -3,9 +3,12 @@
         @import url('https://fonts.googleapis.com/css?family=Roboto');
         @import url('https://fonts.googleapis.com/css?family=Lato');
         @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-        @media only screen and (min-width: 768px) {
+        @media only screen and (max-width: 768px) {
             .toggle {
                 display: flex;
+            }
+            .teamContainer {
+                font-size: .5em;
             }
         }
 
@@ -95,16 +98,17 @@
         .newsButton {
             font-family: 'Open Sans', sans-serif;
             display: inline-block;
-            width: 80%;
+            width: 95%;
             background-color: white;
             color: black;
-            padding: .5em 1em;
+            /*padding: .5em 1em;*/
             text-align: center;
             vertical-align: center;
             text-decoration: none;
             font-size: 1.2em;
             cursor: pointer;
             min-height: 2.5em;
+
         }
 
         .newsButton:hover {
@@ -215,9 +219,10 @@
         .teamContainer {
             font-family: 'Open Sans', sans-serif;
             display: flex;
+            flex-wrap: wrap;
             margin: 0 auto 0 auto;
-            font-size: 40px;
-            padding: 0 60px 0 60px;
+            font-size: 2.5em;
+            padding: 0 1em 0 1em;
             justify-content: space-between;
         }
 
@@ -241,28 +246,35 @@
             margin-bottom: 15em;
         }
 
-        .playerContainer {
-            flex-wrap: nowrap;
+        .teamPlayerContainer {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
             flex-flow: row;
             margin: 2px;
+            margin-top: 2em;
         }
 
         .teamPlayers {
-            max-width: 99px;
-            max-height: 99px;
+            max-width: 130px;
+            max-height: 130px;
             margin: 10px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            width: 50%;
+            width: 100%;
             height: auto;
-            margin: 0 auto 0 auto;
+            margin: 0 auto 0;
         }
 
-        .footer {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            padding: 1em;
+        .teamPlayers>a>h2 {
+            margin-top: -.01em;
             text-align: center;
+        }
+
+        footer {
+            font-family: 'Ubuntu', sans-serif;
+            position: fixed;
+            bottom: 0;
+            margin-bottom: .1em;
         }
