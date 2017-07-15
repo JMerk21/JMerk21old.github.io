@@ -76,6 +76,7 @@
         }
 
         .button {
+            width: 90%;
             background-color: white;
             border: none;
             color: black;
@@ -98,17 +99,17 @@
         .newsButton {
             font-family: 'Open Sans', sans-serif;
             display: inline-block;
-            width: 95%;
+            margin: 0 auto;
+            width: 90%;
             background-color: white;
             color: black;
-            /*padding: .5em 1em;*/
+            padding: .5em 1em;
             text-align: center;
             vertical-align: center;
             text-decoration: none;
             font-size: 1.2em;
             cursor: pointer;
             min-height: 2.5em;
-
         }
 
         .newsButton:hover {
@@ -117,8 +118,7 @@
 
         .newsFeed {
             list-style: none;
-            text-align: center;
-            margin: 0 auto;
+            margin-left: 1em;
         }
 
         #newsFeedHead {
@@ -128,6 +128,23 @@
             align-content: center;
             justify-content: center;
             padding-top: 10px;
+        }
+
+        .matchInfo {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1em;
+            width: 95%;
+            box-shadow: -2px 5px 5px -1px rgba(0, 0, 0, 0.3);
+            background: white;
+            background-clip: content-box;
+            background-size: auto;
+            margin: auto;
+            text-align: center;
+        }
+
+        .matchInfo img {
+            max-height: 20px;
+            max-width: 20px;
         }
 
         #playerName {
@@ -274,7 +291,24 @@
 
         footer {
             font-family: 'Ubuntu', sans-serif;
-            position: fixed;
             bottom: 0;
-            margin-bottom: .1em;
+            color: #707070;
+            height: 2em;
+            position: absolute;
+            font-size: 1em;
+            width: 100%;
+            margin-bottom: auto;
+        }
+
+        .playerFoot {
+            position: static;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #finish1 {
+            margin-top: 1px;
+            font-family: 'Lato', sans-serif;
+            text-align: center;
         }
