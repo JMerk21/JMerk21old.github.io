@@ -3,9 +3,12 @@
         @import url('https://fonts.googleapis.com/css?family=Roboto');
         @import url('https://fonts.googleapis.com/css?family=Lato');
         @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-        @media only screen and (min-width: 768px) {
+        @media only screen and (max-width: 768px) {
             .toggle {
                 display: flex;
+            }
+            .teamContainer {
+                font-size: .5em;
             }
         }
 
@@ -73,6 +76,7 @@
         }
 
         .button {
+            width: 90%;
             background-color: white;
             border: none;
             color: black;
@@ -95,7 +99,8 @@
         .newsButton {
             font-family: 'Open Sans', sans-serif;
             display: inline-block;
-            width: 80%;
+            margin: 0 auto;
+            width: 90%;
             background-color: white;
             color: black;
             padding: .5em 1em;
@@ -113,8 +118,7 @@
 
         .newsFeed {
             list-style: none;
-            text-align: center;
-            margin: 0 auto;
+            margin-left: 1em;
         }
 
         #newsFeedHead {
@@ -124,6 +128,23 @@
             align-content: center;
             justify-content: center;
             padding-top: 10px;
+        }
+
+        .matchInfo {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1em;
+            width: 95%;
+            box-shadow: -2px 5px 5px -1px rgba(0, 0, 0, 0.3);
+            background: white;
+            background-clip: content-box;
+            background-size: auto;
+            margin: auto;
+            text-align: center;
+        }
+
+        .matchInfo img {
+            max-height: 20px;
+            max-width: 20px;
         }
 
         #playerName {
@@ -215,9 +236,10 @@
         .teamContainer {
             font-family: 'Open Sans', sans-serif;
             display: flex;
+            flex-wrap: wrap;
             margin: 0 auto 0 auto;
-            font-size: 40px;
-            padding: 0 60px 0 60px;
+            font-size: 2.5em;
+            padding: 0 1em 0 1em;
             justify-content: space-between;
         }
 
@@ -241,28 +263,55 @@
             margin-bottom: 15em;
         }
 
-        .playerContainer {
-            flex-wrap: nowrap;
+        .teamPlayerContainer {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
             flex-flow: row;
             margin: 2px;
+            margin-top: 2em;
         }
 
         .teamPlayers {
-            max-width: 99px;
-            max-height: 99px;
+            max-width: 130px;
+            max-height: 130px;
             margin: 10px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            width: 50%;
+            width: 100%;
             height: auto;
-            margin: 0 auto 0 auto;
+            margin: 0 auto 0;
         }
 
-        .footer {
-            position: absolute;
+        .teamPlayers>a>h2 {
+            margin-top: -.01em;
+            text-align: center;
+        }
+
+        footer {
+            font-family: 'Ubuntu', sans-serif;
             bottom: 0;
-            right: 0;
+            color: #707070;
+            height: 2em;
+            position: absolute;
+            font-size: 1em;
+            width: 100%;
+            margin-bottom: auto;
+        }
+
+        #playerFoot {
+            position: relative;
+            height: 2em;
+            width: 100%;
+            margin-bottom: auto;
+            bottom: 0;
             left: 0;
-            padding: 1em;
+            right: 0;
+        }
+
+        #finish1 {
+            margin-top: 1px;
+            font-family: 'Lato', sans-serif;
             text-align: center;
         }
